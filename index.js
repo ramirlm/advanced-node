@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 process.env.UV_THREADPOOL_SIZE = 1;
 const cluster = require('cluster');
 
@@ -24,22 +23,3 @@ if (cluster.isMaster) {
 
     app.listen(3000);
 }
-=======
-const express = require('express');
-const app = express();
-
-function doWork(duration) {
-    const start = Date.now();
-
-    while(Date.now() - start < duration) {
-
-    }
-}
-
-app.get('/', (req, res) => {
-    doWork(5000);
-    res.send('Hi there');
-});
-
-app.listen(3000);
->>>>>>> 9e47fcb060af80978fedb3a8d19b5d26568b29ce
